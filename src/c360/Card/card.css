@@ -1,0 +1,40 @@
+/*
+ * C360 Card
+ *
+ * Author(s): 
+ *  - David Jahns (imdavidjahns@yahoo.com)
+ */
+
+:host {
+  --sds-c-card-padding-vertical: var(--sds-g-spacing-medium);
+  --sds-c-card-padding-horizontal: var(--sds-g-spacing-small);
+}
+
+.c360-card {
+  background-color: var(--sds-g-color-neutral-base-2);
+  padding-top: var(--sds-c-card-padding-vertical);
+  padding-right: var(--sds-c-card-padding-horizontal);
+  padding-bottom: var(--sds-c-card-padding-vertical);
+  padding-left: var(--sds-c-card-padding-horizontal);
+  margin-right: var(--sds-c-card-margin-right, 0);
+  margin-bottom: var(--sds-c-card-margin-bottom, 0);
+}
+
+.c360-card__headline,
+.c360-card__image {
+  display: block;
+  margin-bottom: var(--sds-g-spacing-small);
+}
+
+.c360-card__headline {
+  color: var(--sds-g-color-brand-base-contrast-3);
+  font-weight: 600;
+}
+
+.c360-card__image {
+  width: 100%;
+}
+
+.c360-card__body-copy {
+  margin-bottom: var(--sds-g-spacing-medium);
+}

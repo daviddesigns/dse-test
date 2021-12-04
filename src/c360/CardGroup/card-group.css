@@ -1,0 +1,33 @@
+/*
+ * C360 Card Group
+ * 
+ * Component Structure:
+ *   - section.c360-card-group
+ *     - <c360-headline>
+ *     - div.c360-card-group__cards
+ *       - <slot />: Intended for 2 or more <c360-card>
+ *
+ * Author(s): 
+ *  - David Jahns (imdavidjahns@yahoo.com)
+ */
+ 
+/* Headline that spans the entire section / group of cards */
+.c360-card-group__headline {
+  display: block;
+  margin-bottom: var(--sds-g-spacing-large);
+}
+
+.c360-card-group__cards {
+  display: flex;
+  flex-direction: column;
+  --sds-c-card-margin-bottom: var(--sds-g-spacing-small);
+}
+
+/* On screens larger than a phone */
+@media only screen and (min-width: 48em) {
+  .c360-card-group__cards {
+    flex-direction: row;
+    --sds-c-card-margin-right: var(--sds-g-spacing-small);
+    --sds-c-card-margin-bottom: 0;
+  }
+}

@@ -1,0 +1,41 @@
+# C360 Card Group
+<p class="docs__summary">
+    A C360 Card Group is a section-level component intended to wrap and display a group of 2-4 <a href="link/to/cards/docs">C360 Cards</a> under an optional headline.
+</p>
+
+## Component preview
+
+<c360-card-group headline-text="Want to learn more about Salesforce?" headline-level="h1" headline-size="x-large">
+    <c360-card></c360-card>
+    <c360-card></c360-card>
+    <c360-card></c360-card>
+</c360-card-group>
+
+```
+<c360-card-group headline-text="Want to learn more about Salesforce?">
+    <c360-card></c360-card>
+    <c360-card></c360-card>
+    <c360-card></c360-card>
+</c360-card-group>
+```
+
+## Custom attributes available
+| Attribute | Required? |  Type | Default | Description
+| --- | --- | --- | --- | --- |
+| `headline-text` | Optional | String | - | Displays the string you provide above the group of cards in the form of a headline. |
+| `headline-level` | Optional | String | `p` | Sets the DOM element used for the headline. Pass the semantic HTML element name without any brackets. |
+| `headline-size` | Optional | String | `x-large` | Determines the visual size of the headline. Available options: `x-large`, `large`, `medium`, `small`. |
+
+## Accessibility considerations
+
+By default the headline above the group of cards will render as a `<p>` in the DOM.
+
+We have exposed the `headline-level` attribute for you to control based on the semantics of the environment you use this component. The heading level should be passed a string representing the name of the HTML tag needed to be semantically correct for your document structure. i.e. "h1", "h2" "h3", etc.
+
+
+## Other important notes 
+
+* The C360 Card Group will occupy the entire width of its container, and divide the space evenly among the nested C360 Cards based on how many are present. 
+* There is a fixed margin between each card.
+* The cards will stack on small devices.
+* The headline element is an underlying `<c360-headline>` component.
